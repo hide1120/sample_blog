@@ -12,7 +12,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <% if current_page?('/login') %>
+  <% if current_page?(controller: "sessions", action: "new") %>
   <body id="login" class="text-center">
   <% elsif current_page?('/signup') %>
   <body id="signup" class="text-center">
