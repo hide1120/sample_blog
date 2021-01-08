@@ -1,5 +1,5 @@
 <% provide(:title, 'サインアップ') %>
-<%= form_with model: @user, url: signup_path, local: true, class: "form-signin" do |f| %>
+<%= form_with model: @user, url: user_path, local: true, class: "form-signin" do |f| %>
 <h1 class="h3 font-weight-normal mb-4"><%= yield(:title) %></h1>
   <div>
     <%= f.label :email, "メールアドレス", class: "sr-only" %>
