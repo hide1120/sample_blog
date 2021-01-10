@@ -13,7 +13,17 @@
 </div>
 <% 10.times do |n|%>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
-<%= n + 1%>
+<%= link_to "#", class: "d-block each-section-posts-link" do %>
+<div class="each-section-posts-inner">
+<div class="posts-image-container">
+<img src="https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg" class="img-fluid theme-posts-img" alt="作品<%= n + 1 %>">
+</div>
+<div class="posts-title-inner">
+<h2 class="posts-title">[SONY αcafe]ソニーオープンフォトコン　航空機フォトコンテスト2019<%= n + 1 %></h2>
+<p class="read-more margin-bottom-remove"><i class="fa fa-angle-right" aria-hidden="true"></i>詳しく見る</p>
+</div>
+</div>
+<% end %>
 </section>
 <% end %>
 </div>

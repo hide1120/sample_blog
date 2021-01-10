@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 /* 共通
 ******************************************** */
 @import "variables/colors";
@@ -42,7 +43,22 @@
 }
 /* HEADER 共通
 ******************************************** */
-@include media-breakpoint-between(md, xl) {
+@include media-breakpoint-only(xs) {
+  body{
+    padding-top: 3.25rem;
+  }
+}
+@include media-breakpoint-only(sm) {
+  body{
+    padding-top: 3.25rem;
+  }
+}
+@include media-breakpoint-only(md) {
+  body{
+    padding-top: 3rem;
+  }
+}
+@include media-breakpoint-up(lg) {
   body{
     padding-top: 3rem;
   }
