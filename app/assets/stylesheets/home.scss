@@ -9,6 +9,9 @@
     color: $font-color-ccc;
   }
 }
+.each-wrapper:nth-child(even){
+  background-color: $bg-color-light-gray;
+}
 @include media-breakpoint-between(md, xl) {
   .top-mainVisual-container{
     padding: 60px 0;
@@ -20,5 +23,8 @@
     .title-ja{
       color: $font-color-gray-soft;
     }
+  }
+  .each-section-posts{
+    min-height: 300px;
   }
 }

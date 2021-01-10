@@ -4,18 +4,33 @@
 <p class="text-center margin-bottom-remove margin-top--sm description">私が担当・制作させて頂いたWebサイトのご紹介</p>
 </div>
 </div>
-<section class="each-wrapper padding-top--lg padding-bottom--lg">
+<article class="each-wrapper padding-top--lg padding-bottom--lg">
 <div class="container">
 <div class="row">
 <div class="col-12 section-title-container margin-bottom--md">
 <h2 class="title-en margin-bottom-remove">Latest</h2>
 <p class="title-ja margin-bottom-remove">最新情報</p>
 </div>
-<% 50.times do |n|%>
-<div class="col-12 col-md-6 col-lg-4">
+<% 10.times do |n|%>
+<section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= n + 1%>
-</div>
+</section>
 <% end %>
 </div>
 </div>
+</article>
+<article class="each-wrapper padding-top--lg padding-bottom--lg">
+<div class="container">
+<div class="row">
+<div class="col-12 section-title-container margin-bottom--md">
+<h2 class="title-en margin-bottom-remove">Banner</h2>
+<p class="title-ja margin-bottom-remove">今まで制作させていただいたバナーのご紹介</p>
+</div>
+<% 10.times do |n|%>
+<section class="col-12 col-md-6 col-lg-4 each-section-posts">
+<%= n + 1%>
 </section>
+<% end %>
+</div>
+</div>
+</article>
