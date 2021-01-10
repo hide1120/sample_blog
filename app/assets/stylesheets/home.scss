@@ -1,3 +1,24 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+/* 共通設定
+******************************************** */
+.top-mainVisual-wrapper{
+  background-color: $bg-color-dark;
+  .top-mainVisual-container{
+    color: $font-color-white;
+  }
+  .description{
+    color: $font-color-ccc;
+  }
+}
+@include media-breakpoint-between(md, xl) {
+  .top-mainVisual-container{
+    padding: 60px 0;
+  }
+  .top-mainVisual-headline{
+    font-size: $font-size-60px;
+  }
+  .section-title-container{
+    .title-ja{
+      color: $font-color-gray-soft;
+    }
+  }
+}

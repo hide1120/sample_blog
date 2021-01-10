@@ -1,2 +1,21 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="top-mainVisual-wrapper">
+<div class="container top-mainVisual-container">
+<h1 class="text-center top-mainVisual-headline">Welcome to<br>My Portfolio</h1>
+<p class="text-center margin-bottom-remove margin-top--sm description">私が担当・制作させて頂いたWebサイトのご紹介</p>
+</div>
+</div>
+<section class="each-wrapper padding-top--lg padding-bottom--lg">
+<div class="container">
+<div class="row">
+<div class="col-12 section-title-container margin-bottom--md">
+<h2 class="title-en margin-bottom-remove">Latest</h2>
+<p class="title-ja margin-bottom-remove">最新情報</p>
+</div>
+<% 50.times do |n|%>
+<div class="col-12 col-md-6 col-lg-4">
+<%= n + 1%>
+</div>
+<% end %>
+</div>
+</div>
+</section>

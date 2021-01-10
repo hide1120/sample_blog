@@ -1,0 +1,10 @@
+/* 共通設定
+******************************************** */
+.header-nav{
+  background-color: #fff;
+  border-bottom: 1px solid #E5E9EF;
+  .navbar-brand{
+    color: $base-font-color;
+    font-size: $font-size-16px;
+  }
+}
