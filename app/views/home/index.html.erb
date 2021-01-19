@@ -7,11 +7,23 @@
 <article class="each-wrapper padding-top--lg padding-bottom--lg">
 <div class="container">
 <div class="row">
-<div class="col-12 section-title-container margin-bottom--md">
+<div class="col-12 col-md-10 section-title-container margin-bottom--md">
 <h2 class="title-en margin-bottom-remove">Latest</h2>
 <p class="title-ja margin-bottom-remove">最新情報</p>
 </div>
-<% 10.times do |n|%>
+<div class="col-md-2 text-right">
+<%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
+</div>
+<%
+  posts = Post.all
+%>
+<% posts.each do |post| %>
+  <%= post.title %>
+  <%= post.body %>
+  <%= link_to "リンク", @post %>
+<% end %>
+
+<% 6.times do |n|%>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= link_to "#", class: "d-block each-section-posts-link" do %>
 <div class="each-section-posts-inner">
@@ -36,7 +48,7 @@
 <h2 class="title-en margin-bottom-remove">Banner</h2>
 <p class="title-ja margin-bottom-remove">今まで制作させていただいたバナーのご紹介</p>
 </div>
-<% 10.times do |n|%>
+<% 6.times do |n|%>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= n + 1%>
 </section>
