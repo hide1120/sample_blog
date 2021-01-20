@@ -12,17 +12,23 @@
 <p class="title-ja margin-bottom-remove">最新情報</p>
 </div>
 <div class="col-md-2 text-right">
-<%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
+  <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
 </div>
-<%
-  posts = Post.all
-%>
-<% posts.each do |post| %>
-  <%= post.title %>
-  <%= post.body %>
-  <%= link_to "リンク", @post %>
+<% @posts.each do |post| %>
+<section class="col-12 col-md-6 col-lg-4 each-section-posts">
+  <%= link_to post, class: "d-block each-section-posts-link" do %>
+  <div class="each-section-posts-inner">
+  <div class="posts-title-inner">
+  <h2 class="posts-title"><%= post.title %></h2>
+  <p class="read-more margin-bottom-remove"><i class="fa fa-angle-right" aria-hidden="true"></i>詳しく見る</p>
+  </div>
+  </div>
+  <% end %>
+</section>
 <% end %>
-
+<div class="col-12 text-center">
+  <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
+</div>
 <% 6.times do |n|%>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= link_to "#", class: "d-block each-section-posts-link" do %>
