@@ -6,6 +6,7 @@ ja:
     attributes:
       post:
         title: タイトル
+        img: 画像
         body: 説明文
     errors:
       messages:

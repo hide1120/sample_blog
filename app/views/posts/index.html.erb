@@ -1,11 +1,17 @@
+<% provide(:title, "投稿一覧") %>
 <div class="container margin-top--md">
 <div class="row">
+<%= render "shared/error" %>
 <% @posts.each do |post| %>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= link_to post, class: "d-block each-section-posts-link" do %>
 <div class="each-section-posts-inner">
 <div class="posts-image-container">
-<img src="https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg" class="img-fluid theme-posts-img" alt="作品">
+<% if post.img? %>
+<%= image_tag post.img.url %>
+<% else %>
+<%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
+<% end %>
 </div>
 <div class="posts-title-inner">
 <h2 class="posts-title"><%= post.title %></h2>

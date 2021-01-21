@@ -1,2 +1,11 @@
-
-<%= @post.body %>
+<% provide(:title, "編集する") %>
+<div class="container">
+<div class="row">
+<div class="col-12 padding-top--md">
+<h1 class="h3 text-center"><%= yield(:title) %></h1>
+<div class="col-12 col-md-6 m-auto">
+<%= render "posts/edit_form" %>
+</div>
+</div>
+</div>
+</div>

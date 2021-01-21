@@ -9,6 +9,15 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = "更新されました"
+      redirect_to @post
+    else
+      render "edit"
+    end
+  end
 
   def new
     @post = Post.new
@@ -16,19 +25,26 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:success] = "保存に成功"
-      redirect_to :root
+      flash[:success] = "保存に成功しました"
+      redirect_to @posts
     else
       render "new"
     end
+  end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:danger] = "投稿を削除しました"
+    redirect_to @posts
   end
 
     private
       def post_params
         params.require(:post).permit(
           :title,
-          :body
+          :body,
+          :img
           )
       end
 end

@@ -1,7 +1,17 @@
+<% provide(:title, @post.title) %>
 <div class="container margin-top--lg">
 <div class="row">
 <div class="col-12 col-md-10 ol-lg-8 col-xl-7 m-auto">
-<h1 class="h3"><%= @post.title %></h1>
+<%= render "shared/error" %>
+<div class="text-right">
+  <%= link_to "編集する", edit_post_path %>
+</div>
+<h1 class="h3 mb-3"><%= @post.title %></h1>
+<div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+<% else %>
+<%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
+<% end %>
+</div>
 <%= @post.body %>
 </div>
 </div>

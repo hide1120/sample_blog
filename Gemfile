@@ -63,3 +63,6 @@ gem "font-awesome-rails"
 
 # エラー
 gem 'rails-i18n'
+
+# 画像アップロード
+gem 'carrierwave', '~> 2.0'
