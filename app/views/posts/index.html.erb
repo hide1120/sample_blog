@@ -8,7 +8,7 @@
 <div class="each-section-posts-inner">
 <div class="posts-image-container">
 <% if post.img? %>
-<%= image_tag post.img.url %>
+<%= image_tag post.img.url, alt: post.title %>
 <% else %>
 <%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
 <% end %>

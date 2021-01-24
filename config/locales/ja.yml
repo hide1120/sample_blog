@@ -7,6 +7,7 @@ ja:
       post:
         title: タイトル
         img: 画像
+        urls: URL
         body: 説明文
     errors:
       messages:

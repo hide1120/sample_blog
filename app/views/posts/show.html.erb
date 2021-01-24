@@ -8,11 +8,26 @@
   <%= link_to "削除する", @post, method: :delete, class: "btn btn-danger", data: { confirm: "本当に削除しますか？" } %>
 </div>
 <h1 class="h3 mb-3"><%= @post.title %></h1>
-<div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+<% if @post.urls? %>
+  <%= link_to @post.urls, target: :_blank do %>
+    <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+      <% else %>
+    <%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
+    <% end %>
+    </div>
+  <% end %>
 <% else %>
-<%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
+  <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+    <% else %>
+  <%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
+    <% end %>
+  </div>
 <% end %>
-</div>
-<%= @post.body %>
+<% if @post.urls? %>
+<p class="text-right"><%= link_to "サイトURLはこちら", @post.urls, target: :_blank %></p>
+<% else %>
+
+<% end %>
+<p><%= @post.body %></p>
 </div>
 </div>

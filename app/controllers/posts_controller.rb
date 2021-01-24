@@ -44,6 +44,7 @@ class PostsController < ApplicationController
         params.require(:post).permit(
           :title,
           :body,
+          :urls,
           :img
           )
       end
