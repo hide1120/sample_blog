@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = "保存に成功しました"
-      redirect_to @posts
+      redirect_to @post
     else
       render "new"
     end
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     flash[:danger] = "投稿を削除しました"
-    redirect_to @posts
+    redirect_to @post
   end
 
     private

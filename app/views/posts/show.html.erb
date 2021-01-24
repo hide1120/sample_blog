@@ -4,7 +4,8 @@
 <div class="col-12 col-md-10 ol-lg-8 col-xl-7 m-auto">
 <%= render "shared/error" %>
 <div class="text-right">
-  <%= link_to "編集する", edit_post_path %>
+  <%= link_to "編集する", edit_post_path, class: "btn btn-info" %>
+  <%= link_to "削除する", @post, method: :delete, class: "btn btn-danger", data: { confirm: "本当に削除しますか？" } %>
 </div>
 <h1 class="h3 mb-3"><%= @post.title %></h1>
 <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
