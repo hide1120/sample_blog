@@ -1,7 +1,7 @@
 module ApplicationHelper
   # タイトル
   def full_title(page_title = '')
-    base_title = "Sample Blog"
+    base_title = "ポートフォリオ"
     if page_title.empty?
       base_title
     else
