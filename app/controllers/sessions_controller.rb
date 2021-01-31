@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       login(user)
       flash[:success] = "ログインできました"
-      redirect_to admin_index_path
+      redirect_to :root
     else
-      flash.now[:danger] = "間違ってるよ"
+      flash.now[:danger] = "ログインできませんでした"
       render "new"
     end
   end

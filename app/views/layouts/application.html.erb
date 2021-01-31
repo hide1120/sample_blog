@@ -2,15 +2,7 @@
 <html lang="ja">
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="format-detection" content="telephone=no">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= render "layouts/rails_default" %>
   </head>
 
   <% if current_page?(controller: "sessions", action: "new") %>
@@ -21,11 +13,10 @@
   <body>
   <% end %>
   <%= render "layouts/header" %>
+  <%= render "shared/error" %>
     <%= yield %>
     <div>
     <%= debug(params) if Rails.env.development? %>
     </div>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
