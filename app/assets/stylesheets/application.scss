@@ -41,6 +41,14 @@
       border-top-right-radius: 0;
     }
 }
+.alert-wrapper{
+  position: relative;
+  .alert{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+  }
+}
 /* HEADER 共通
 ******************************************** */
 @include media-breakpoint-only(xs) {

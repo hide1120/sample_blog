@@ -4,6 +4,7 @@
 <div class="col-12">
 <div class="col-12 col-md-6 m-auto">
 <h1 class="h3 text-center mb-3"><%= yield(:title) %></h1>
+<%= render "shared/error-post" %>
 <%= form_with model: @post, local: true do |f| %>
 <%= render "posts/form", f: f %>
 <div class="text-center">
