@@ -1,10 +1,7 @@
 <% if @post.errors.any? %>
   <div class="alert alert-danger" role="alert">
-    <h4 class="alert-heading">
-      保存されませんでした
-    </h4>
+    <h4 class="alert-heading">エラーが<%= pluralize(@post.errors.count, "つあります。") %></h4>
     <hr>
-    <p>エラーが<%= pluralize(@post.errors.count, "つあります。") %></p>
     <ul>
     <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
