@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_073148) do
+ActiveRecord::Schema.define(version: 2021_02_02_085440) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2021_01_29_073148) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "img"
     t.string "urls"
-    t.string "token"
   end
 
   create_table "users", force: :cascade do |t|
