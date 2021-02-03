@@ -6,13 +6,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def create
-    user = User.new(user_params)
-    if user.save
-      login(user)
+    @user = User.new(user_params)
+    if @user.save
+      login(@user)
       flash[:success] = "サインアップできました"
       redirect_to user_path
     else
-      flash.now[:danger] = "サインアップできませんでした"
       render 'new'
     end
   end
@@ -21,6 +20,6 @@ class UsersController < ApplicationController
 
     private
       def user_params
-        params.require(:user).permit(:email, :password, :passeord_confirmation)
+        params.require(:user).permit(:email, :password, :password_confirmation)
       end
 end

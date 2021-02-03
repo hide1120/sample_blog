@@ -14,6 +14,9 @@
 <div class="col-md-2 text-right">
   <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
 </div>
+<% if @post.present? %>
+<p class="col-12">まだ投稿はありません</p>
+<% end %>
 <% @posts.each do |post| %>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
   <%= link_to post, class: "d-block each-section-posts-link" do %>

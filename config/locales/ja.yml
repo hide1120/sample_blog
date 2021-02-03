@@ -9,6 +9,10 @@ ja:
         img: 画像
         urls: URL
         body: 説明文
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
