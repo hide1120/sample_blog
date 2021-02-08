@@ -11,9 +11,12 @@ class User < ApplicationRecord
   validates :password, presence: true, confirmation: true,
                        length: { minimum: 6 }, allow_nil: true
 
-    private
+  # userimage
+  mount_uploader :userimage, ImgUploader
+
+  private
       # メルアドをすべて小文字に変換する
       def downcase_email
-        self.email = emial.downcase
+        self.email = email.downcase
       end
 end

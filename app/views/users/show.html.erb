@@ -1,4 +1,12 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, "ユーザーネーム：" + current_user.name) %>
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-6 m-auto margin-top--md">
+<p><%= image_tag current_user.userimage.url %></p>
+<p><%= current_user.name %></p>
 <p><%= current_user.email %></p>
+<%= link_to "プロフィールを編集する", edit_user_path %>
 <%= link_to "ログアウト", logout_path, method: :delete, data: { confirm: "本当にログアウトしますか？" } %>
+</div>
+</div>
+</div>

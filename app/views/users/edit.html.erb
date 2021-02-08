@@ -1,0 +1,17 @@
+<% provide(:title, "ユーザー編集") %>
+<div class="container">
+<div class="row">
+<div class="col-12 margin-top--md">
+<h1 class="h3 text-center"><%= yield(:title) %></h1>
+<div class="col-12 col-md-6 m-auto">
+<%= render "shared/error-user" %>
+<%= form_with model: @user, local: true do |f| %>
+<%= render "users/form", f: f %>
+<div class="text-center">
+  <%= f.submit "更新する", class: "btn btn-success" %>
+</div>
+<% end %>
+</div>
+</div>
+</div>
+</div>
