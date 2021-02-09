@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
     if @user.update(user_params)
       flash[:success] = "更新されました"
-      redirect_to current_user
+      redirect_to :user
     else
       render "new"
     end

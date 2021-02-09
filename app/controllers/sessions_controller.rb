@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       login(user)
-      flash[:success] = "ログインできました"
+      flash[:success] = "ログインしました"
       redirect_to :root
     else
       flash.now[:danger] = "ログインできませんでした"

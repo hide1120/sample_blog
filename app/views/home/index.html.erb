@@ -11,7 +11,7 @@
 <h2 class="title-en margin-bottom-remove">Latest</h2>
 <p class="title-ja margin-bottom-remove">最新情報</p>
 </div>
-<% unless @posts %>
+<% if @posts %>
 <div class="col-md-2 text-right">
   <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
 </div>
@@ -36,11 +36,11 @@
   <% end %>
 </section>
 <% end %>
-<p class="col-12">まだ投稿はありません</p>
-<% else %>
 <div class="col-12 text-center">
   <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
 </div>
+<% else %>
+<p class="col-12">まだ投稿はありません</p>
 <% end %>
 </div>
 </div>

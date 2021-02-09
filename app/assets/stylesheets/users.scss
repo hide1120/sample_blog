@@ -1,3 +1,14 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.current_user-container{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2rem 3rem;
+  #current_user-image{
+    border-radius: 50%;
+    max-width: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+  }
+}

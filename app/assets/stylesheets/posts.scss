@@ -4,3 +4,10 @@
 .post-mainVisual:hover{
   opacity: .5;
 }
+// show.html
+#btn-authenticate_user-post-info{
+  color: #999;
+  &::after{
+  content: inherit;
+  }
+}

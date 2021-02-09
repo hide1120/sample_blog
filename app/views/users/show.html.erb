@@ -1,12 +1,15 @@
 <% provide(:title, "ユーザーネーム：" + current_user.name) %>
 <div class="container">
 <div class="row">
-<div class="col-12 col-md-6 m-auto margin-top--md">
-<p><%= image_tag current_user.userimage.url %></p>
-<p><%= current_user.name %></p>
-<p><%= current_user.email %></p>
-<%= link_to "プロフィールを編集する", edit_user_path %>
-<%= link_to "ログアウト", logout_path, method: :delete, data: { confirm: "本当にログアウトしますか？" } %>
+<div class="col-12 col-md-6 m-auto">
+<div class="current_user-container margin-top--md">
+<p class="text-center"><%= image_tag current_user.userimage.url, id: "current_user-image", class: "img-fluid" %></p>
+<p class="text-center font-weight-bold current_user-name"><%= current_user.name %></p>
+<div class="text-center">
+  <%= link_to "プロフィールを編集する", edit_user_path, class: "btn btn-secondary" %>
+  <%= link_to "ログアウト", logout_path, method: :delete, class: "btn btn-danger", data: { confirm: "本当にログアウトしますか？" } %>
+</div>
+</div>
 </div>
 </div>
 </div>
