@@ -1,24 +1,24 @@
 /* 共通設定
 ******************************************** */
 .top-mainVisual-wrapper{
-  background-color: $bg-color-dark;
+  background-color: #000;
   .top-mainVisual-container{
-    color: $font-color-white;
+    color: #fff;
   }
   .description{
-    color: $font-color-ccc;
+    color: #ccc;
   }
 }
 .each-wrapper:nth-child(even){
-  background-color: $bg-color-light-gray;
+  background-color: #f9f9f9;
 }
 .section-title-container{
   .title-ja{
-    color: $font-color-gray-soft;
+    color: #f9f9f9;
   }
 }
 .each-section-posts-link{
-  color: $base-font-color;
+  color: #000;
   img{
     border-radius: 6px;
     object-fit: cover;
@@ -31,14 +31,14 @@
     opacity: .5;
   }
   &:hover .posts-title-inner{
-    color: $base-font-color;
+    color: #000;
     .posts-title{
       text-decoration: underline;
     }
   }
   .posts-title-inner{
     .read-more{
-      color: $font-color-gray-soft;
+      color: #f9f9f9;
     }
   }
 }
