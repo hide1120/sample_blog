@@ -6,13 +6,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by(public_uid: params[:id])
   end
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by(public_uid: params[:id])
   end
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by(public_uid: params[:id])
     if @post.update(post_params)
       flash[:success] = "更新されました"
       redirect_to @post
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.find_by(public_uid: params[:id])
     @post.destroy
     flash[:danger] = "投稿を削除しました"
     redirect_to @post
