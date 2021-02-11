@@ -66,3 +66,6 @@ gem 'rails-i18n'
 
 # 画像アップロード
 gem 'carrierwave', '~> 2.0'
+
+# PublicUid（ランダムな乱数）
+gem 'public_uid'
