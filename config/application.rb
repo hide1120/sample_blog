@@ -14,5 +14,6 @@ module SampleBlog
     config.time_zone = ENV["TZ"]
     config.i18n.default_locale = :ja
     config.active_record.default_timezone = :utc
+    config.time_zone = 'Tokyo'
   end
 end
