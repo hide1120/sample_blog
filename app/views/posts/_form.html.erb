@@ -1,4 +1,3 @@
-
 <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
@@ -18,9 +17,22 @@
   <%= f.label :body %>
   <%= f.text_area :body, size: "20x10", class: "form-control" %>
 </div>
+<div class="form-group">
+  <%= f.label :content %>
+  <%= f.text_area :content, 'data-provider': :summernote, class: "form-control", id:"summernote" %>
+</div>
 <script>
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
+$(document).ready(function() {
+  $('#summernote').summernote({
+    placeholder: '記事本文を入力しましょう',
+    tabsize: 3,
+    height: 400
+    });
+  }
+);
+
 </script>

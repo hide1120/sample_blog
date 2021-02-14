@@ -69,3 +69,6 @@ gem 'carrierwave', '~> 2.0'
 
 # PublicUid（ランダムな乱数）
 gem 'public_uid'
+
+# リッチテキストエディター
+gem 'summernote-rails'

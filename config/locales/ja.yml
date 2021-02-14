@@ -8,6 +8,7 @@ ja:
         img: 画像
         urls: URL
         body: 説明文
+        content: コンテンツ
       user:
         name: ユーザーネーム
         email: メールアドレス
