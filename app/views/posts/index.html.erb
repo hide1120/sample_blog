@@ -2,6 +2,7 @@
 <div class="container margin-top--md">
 <div class="row">
 <%= render "shared/error" %>
+<% if @posts.present? %>
 <% @posts.each do |post| %>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
 <%= link_to post, class: "d-block each-section-posts-link" do %>
@@ -20,6 +21,9 @@
 </div>
 <% end %>
 </section>
+<% end %>
+<% else %>
+<p>まだ投稿がありません</p>
 <% end %>
 </div>
 </div>
