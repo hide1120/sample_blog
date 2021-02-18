@@ -2,10 +2,10 @@
 <div class="container margin-top--lg">
 <div class="row">
 <div class="col-12 col-md-10 ol-lg-8 col-xl-7 m-auto">
-<% if current_user %>
-<div>
+<div class="mb-3">
 <%= link_to "投稿一覧", :posts, class: "btn btn-outline-primary" %>
 </div>
+<% if current_user %>
 <div class="text-right mb-3">
   <button id="btn-authenticate_user-post-info" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
   </button>

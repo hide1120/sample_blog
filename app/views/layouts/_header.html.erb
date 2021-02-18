@@ -21,7 +21,7 @@
           <%= link_to "ログアウトする", :logout, class: "dropdown-item", method: :delete, data: { confirm: "本当にログアウトしますか？" } %>
         </div>
         </div>
-        <% else %>
+        <% elsif Rails.env.development? %>
           <%= link_to "ログイン", :login, class: "btn btn-primary" %>
         <% end %>
         </div>
