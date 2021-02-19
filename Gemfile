@@ -72,3 +72,6 @@ gem 'public_uid'
 
 # リッチテキストエディター
 gem 'summernote-rails'
+
+# photoswipe
+gem 'photoswipe-rails'

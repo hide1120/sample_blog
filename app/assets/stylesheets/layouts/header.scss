@@ -1,4 +1,4 @@
-/* 共通設定
+/* 共通
 ******************************************** */
 .header-nav{
   background-color: #fff;
@@ -16,5 +16,25 @@
       border: 1px solid #ccc;
       margin-right: 3px;
     }
+  }
+}
+@include media-breakpoint-only(xs) {
+  body{
+    padding-top: 3.25rem;
+  }
+}
+@include media-breakpoint-only(sm) {
+  body{
+    padding-top: 3.25rem;
+  }
+}
+@include media-breakpoint-only(md) {
+  body{
+    padding-top: 3rem;
+  }
+}
+@include media-breakpoint-up(lg) {
+  body{
+    padding-top: 3rem;
   }
 }

@@ -2,17 +2,17 @@
 <%= render "shared/error-user" %>
 <%= form_with model: @user, url: user_path, local: true, class: "form-signin" do |f| %>
 <h1 class="h3 font-weight-normal mb-4"><%= yield(:title) %></h1>
-  <div>
-    <%= f.label :email, "メールアドレス", class: "sr-only" %>
-    <%= f.email_field :email, class: "form-control" %>
+  <div class="form-label-group">
+    <%= f.email_field :email, class: "form-control", placeholder: "メールアドレスを入力してください" %>
+    <%= f.label :email, "メールアドレス" %>
   </div>
-  <div>
-    <%= f.label :password, "パスワード", class: "sr-only" %>
-    <%= f.password_field :password, class: "form-control" %>
+  <div class="form-label-group">
+    <%= f.password_field :password, class: "form-control", placeholder: "パスワードを入力してください" %>
+    <%= f.label :password, "パスワード" %>
   </div>
-  <div>
-    <%= f.label :password_confirmation, "【確認用】パスワード", class: "sr-only" %>
-    <%= f.password_field :password_confirmation, class: "form-control" %>
+  <div class="form-label-group">
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "確認用としてパスワードをもう一度入力してください" %>
+    <%= f.label :password_confirmation %>
   </div>
   <div class="mb-3">
     <%= f.submit 'サインアップ', class: "btn btn-primary" %>

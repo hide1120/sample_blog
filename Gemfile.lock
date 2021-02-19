@@ -130,6 +130,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    photoswipe-rails (4.1.2)
     popper_js (1.16.0)
     public_suffix (4.0.6)
     public_uid (2.1.1)
@@ -249,6 +250,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  photoswipe-rails
   public_uid
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

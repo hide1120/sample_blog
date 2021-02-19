@@ -12,6 +12,10 @@
 ******************************************** */
 @import "summernote-bs4";
 
+/* photoswipe
+******************************************** */
+@import "photoswipe";
+
 /* SESSIONS 共通
 ******************************************** */
 @import "sessions";
@@ -22,28 +26,6 @@
 ******************************************** */
 @import "posts";
 
-/* HEADER 共通
-******************************************** */
-@include media-breakpoint-only(xs) {
-  body{
-    padding-top: 3.25rem;
-  }
-}
-@include media-breakpoint-only(sm) {
-  body{
-    padding-top: 3.25rem;
-  }
-}
-@include media-breakpoint-only(md) {
-  body{
-    padding-top: 3rem;
-  }
-}
-@include media-breakpoint-up(lg) {
-  body{
-    padding-top: 3rem;
-  }
-}
 /* HOME 共通
 ******************************************** */
 .top-mainVisual-wrapper{

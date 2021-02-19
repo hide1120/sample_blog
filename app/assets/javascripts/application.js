@@ -6,4 +6,5 @@
 //= require activestorage
 //= require turbolinks
 //= require summernote/lang/summernote-ja-JP
+//= require photoswipe
 //= require_tree .

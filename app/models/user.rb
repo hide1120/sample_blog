@@ -22,8 +22,8 @@ class User < ApplicationRecord
   mount_uploader :userimage, ImgUploader
 
   private
-      # メルアドをすべて小文字に変換する
-      def downcase_email
-        self.email = email.downcase
-      end
+    # メルアドをすべて小文字に変換する
+    def downcase_email
+      self.email = email.downcase
+    end
 end
