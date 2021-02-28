@@ -1,0 +1,11 @@
+<% if @banner.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">エラーが<%= pluralize(@banner.errors.count, "つあります。") %></h4>
+    <hr>
+    <ul>
+    <% @banner.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

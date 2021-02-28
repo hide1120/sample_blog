@@ -1,0 +1,18 @@
+<% provide(:title, "バナー一覧")%>
+<div class="container margin-top--md">
+<div class="row photoswipe-gallery">
+<% @banners.each do |banner| %>
+<section class="col-12 col-md-6 col-lg-4 each-section-banners">
+<figure class="photoswipe-figure text-center">
+  <% if banner.img? %>
+    <%= link_to banner.img.url, class: "photoswipe-link d-block", data: { size: "1500x4000" } do %>
+      <%= image_tag banner.img.url, class: "photoswipe-img" %>
+    <% end %>
+    <figcaption><%= banner.title %></figcaption>
+  <% end %>
+</figure>
+</section>
+<% end %>
+</div>
+</div>
+<%= render "banners/control_photoswipe" %>

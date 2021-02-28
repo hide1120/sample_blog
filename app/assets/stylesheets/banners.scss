@@ -1,0 +1,15 @@
+.photoswipe-figure{
+  .photoswipe-link{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 1rem;
+    &:hover{
+      opacity: .5;
+    }
+  }
+  .photoswipe-img{
+    height: 250px;
+    border-radius: 6px;
+  }
+}

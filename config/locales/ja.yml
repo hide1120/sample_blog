@@ -3,6 +3,9 @@ ja:
     models:
       post: 投稿
     attributes:
+      banner:
+        title: タイトル
+        img: 画像
       post:
         title: タイトル
         img: 画像

@@ -14,7 +14,8 @@
 
 /* photoswipe
 ******************************************** */
-@import "photoswipe";
+@import "photoswipe/photoswipe";
+@import "photoswipe/default-skin/default-skin";
 
 /* SESSIONS 共通
 ******************************************** */
@@ -25,9 +26,15 @@
 /* POST 共通
 ******************************************** */
 @import "posts";
+/* BANNER 共通
+******************************************** */
+@import "banners";
 
 /* HOME 共通
 ******************************************** */
+/*
+MAIN VISUAL
+*/
 .top-mainVisual-wrapper{
   background-color: $base-font-color;
   .top-mainVisual-container{
@@ -37,6 +44,9 @@
     color: #ccc;
   }
 }
+/*
+LATEST
+*/
 .each-wrapper:nth-child(even){
   background-color: $bg-color-light-gray;
 }
@@ -70,6 +80,10 @@
     }
   }
 }
+/*
+BANNERS
+*/
+
 @include media-breakpoint-only(xs) {
   .top-mainVisual-container{
     padding: 40px 0;

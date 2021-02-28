@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_111917) do
+ActiveRecord::Schema.define(version: 2021_02_24_070346) do
+
+  create_table "banners", force: :cascade do |t|
+    t.string "title"
+    t.string "img"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
