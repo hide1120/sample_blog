@@ -7,14 +7,19 @@
 <article class="each-wrapper padding-top--lg padding-bottom--lg">
 <div class="container">
 <div class="row">
-<div class="col-6 col-md-9 section-title-container margin-bottom--md">
+<div class="col section-title-container margin-bottom--md">
 <h2 class="title-en margin-bottom-remove">Latest</h2>
 <p class="title-ja margin-bottom-remove">最新情報</p>
 </div>
 <% if @posts.present? %>
-<div class="col-6 col-md-3 text-right">
+<div class="col text-right">
   <%= link_to "すべて見る", :posts, class: "btn btn-outline-primary" %>
 </div>
+<% end %>
+</div>
+<% if @posts.present? %>
+<div class="row">
+
 <% @posts.each do |post| %>
 <section class="col-12 col-md-6 col-lg-4 each-section-posts">
   <%= link_to post, class: "d-block each-section-posts-link" do %>
