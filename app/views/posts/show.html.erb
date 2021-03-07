@@ -1,12 +1,13 @@
 <% provide(:title, @post.title) %>
-<div class="container margin-top--lg">
+<div class="container margin-top--lg padding-bottom--lg">
 <div class="row">
-<div class="col-12 col-md-10 ol-lg-8 col-xl-7 m-auto">
-<div class="mb-3">
+<div class="col-12 col-sm-10 col-md-9 col-lg-8 m-auto">
+<div class="row">
+<div class="col mb-3">
 <%= link_to "投稿一覧", :posts, class: "btn btn-outline-primary" %>
 </div>
 <% if current_user %>
-<div class="text-right mb-3">
+<div class="col text-right mb-3">
   <button id="btn-authenticate_user-post-info" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
   </button>
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
@@ -16,29 +17,30 @@
   </div>
 </div>
 <% end %>
-<h1 class="h3 mb-3"><%= @post.title %></h1>
+</div>
+<h1 class="post-title mb-3"><%= @post.title %></h1>
 <time class="small text-monospace d-none" datetime="<%= @post.updated_at %>"><%= @post.updated_at.to_s(:datetime_jp) %></time>
 <% if @post.urls? %>
   <%= link_to @post.urls, target: :_blank do %>
-    <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+    <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background-image: url(<%= @post.img.url %>);">
       <% else %>
     <%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
     <% end %>
     </div>
   <% end %>
 <% else %>
-  <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background: url(<%= @post.img.url %>) no-repeat; background-size: cover; height: 400px;">
+  <div class="text-center mb-4 post-mainVisual" <% if @post.img? %> style="background-image: url(<%= @post.img.url %>);">
     <% else %>
   <%= image_tag "https://themes.getbootstrap.com/wp-content/uploads/2019/10/screenshot-1-600x450.jpg", class: "img-fluid" %>
     <% end %>
   </div>
 <% end %>
 <% if @post.urls? %>
-<p class="text-right"><%= link_to "サイトURLはこちら", @post.urls, target: :_blank %></p>
+<p class="text-right"><%= link_to @post.urls, @post.urls, target: :_blank %></p>
 <% else %>
 
 <% end %>
 <p class="m-0"><%= @post.body %></p>
-<div id="summernote-editor"><%= @post.content.html_safe %></div>
+<div id="summernote-editor" class="mrgin-bottom--lg"><%= @post.content.html_safe %></div>
 </div>
 </div>

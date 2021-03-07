@@ -22,10 +22,35 @@
 @import "sessions";
 /* USER 共通
 ******************************************** */
-@import "users";
+.current_user-container{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2rem 3rem;
+  #current_user-image{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+}
 /* POST 共通
 ******************************************** */
-@import "posts";
+.post-mainVisual:hover{
+  opacity: .5;
+}
+// show.html
+#btn-authenticate_user-post-info{
+  color: #999;
+  &::after{
+  content: inherit;
+  }
+}
+.post-mainVisual{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#summernote-editor table p{
+  margin: 0;
+}
 /* BANNER 共通
 ******************************************** */
 @import "banners";
@@ -115,6 +140,18 @@ BANNERS
       }
     }
   }
+  // POST
+  .post-title{
+    font-size: 1.25rem;
+  }
+  .post-mainVisual{
+    height: 280px;
+  }
+  // USERS
+  #current_user-image{
+    width: 60px;
+    height: 60px;
+  }
 }
 @include media-breakpoint-only(sm) {
   .top-mainVisual-container{
@@ -144,6 +181,18 @@ BANNERS
       }
     }
   }
+  // POST
+  .post-title{
+    font-size: 1.25rem;
+  }
+  .post-mainVisual{
+    height: 320px;
+  }
+  // USERS
+  #current_user-image{
+    width: 80px;
+    height: 80px;
+  }
 }
 @include media-breakpoint-only(md) {
   .top-mainVisual-container{
@@ -171,6 +220,18 @@ BANNERS
         padding-right: 8px;
       }
     }
+  }
+  // POST
+  .post-title{
+    font-size: 1.5rem;
+  }
+  .post-mainVisual{
+    height: 350px;
+  }
+  // USERS
+  #current_user-image{
+    width: 100px;
+    height: 100px;
   }
 }
 @include media-breakpoint-up(lg) {
@@ -200,4 +261,17 @@ BANNERS
       }
     }
   }
+  // POSTS
+  .post-title{
+    font-size: 1.75rem;
+  }
+  .post-mainVisual{
+    height: 400px;
+  }
+  // USERS
+  #current_user-image{
+    width: 100px;
+    height: 100px;
+  }
+
 }
