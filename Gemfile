@@ -78,3 +78,6 @@ gem 'summernote-rails'
 
 # photoswipe
 gem 'photoswipe-rails'
+
+# AWS
+gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
