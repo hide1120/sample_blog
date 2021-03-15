@@ -30,9 +30,20 @@ $(document).ready(function() {
   $('#summernote').summernote({
     placeholder: '記事本文を入力しましょう',
     tabsize: 3,
-    height: 400
+    height: 400,
+    lang: 'ja-JP', /*日本語対応*/
+    toolbar: [
+      ['style', ['bold', 'italic', 'underline', 'clear']],
+      ['fontsize', ['fontsize']],
+      ['color', ['color']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['height', ['height']],
+      ['insert', ['picture', 'video']],
+    ],
+    onImageUpload: function(files, editor, welEditable) {
+        sendFile(files[0], editor,welEditable);
+    }
     });
   }
 );
-
 </script>
