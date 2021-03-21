@@ -75,6 +75,8 @@ gem 'public_uid'
 
 # リッチテキストエディター
 gem 'summernote-rails'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
 
 # photoswipe
 gem 'photoswipe-rails'

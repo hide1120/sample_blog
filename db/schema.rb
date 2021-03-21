@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_24_070346) do
+ActiveRecord::Schema.define(version: 2021_03_17_124946) do
 
   create_table "banners", force: :cascade do |t|
     t.string "title"
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(version: 2021_02_24_070346) do
     t.text "content"
     t.index ["content"], name: "index_posts_on_content"
     t.index ["public_uid"], name: "index_posts_on_public_uid", unique: true
+  end
+
+  create_table "uploads", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
