@@ -1,6 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control" %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control" %>
 </div>
 <div class="form-group">
   <div class="custom-file">
@@ -30,9 +31,12 @@ $(document).ready(function() {
   $('#summernote').summernote({
     placeholder: '記事本文を入力しましょう',
     tabsize: 3,
-    height: 400
-    });
-  }
-);
+    height: 400,
+    lang: 'ja-JP', /*日本語対応*/
 
+    // onImageUpload: function(files, editor, welEditable) {
+    //     sendFile(files[0], editor,welEditable);
+    // }
+    });
+  });
 </script>
