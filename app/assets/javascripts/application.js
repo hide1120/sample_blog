@@ -5,5 +5,4 @@
 //= require summernote/summernote-bs4.min
 //= require summernote/lang/summernote-ja-JP
 //= require activestorage
-//= require photoswipe
 //= require_tree .
